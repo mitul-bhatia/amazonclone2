@@ -1,166 +1,217 @@
-*{
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
 }
 
-.container{
+.container {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 70vh;
-    box-shadow: 2px 2px 5px 5px grey;
+    height: 75vh;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     width: 60vw;
-    margin: auto;
-    margin-top: 10%;
+    margin-top: 5%;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
 }
 
-.description, .img, .pricedetails{
-    height: 90%;
+.container:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
-.img{
-    width:20%;
+.img {
+    width: 20%;
     display: flex;
     justify-content: center;
+    transition: transform 0.3s ease;
 }
 
-.img img{
+.img img {
     height: 80%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
-.description{
+.img img:hover {
+    transform: scale(1.05);
+}
+
+.description {
     width: 40%;
+    padding: 10px;
+    transition: color 0.3s ease;
 }
 
-.description h1{
-    font-family: sans-serif;
-}
-
-.description .brand{
-    margin: 30px 0px;
-    font-size: 1.5rem;
-    font-family: sans-serif;
-    color: rgb(49, 49, 49);
-}
-.description .mrp
-{
-    margin: 30px 0px 0px;
-    font-size: 1rem;
-    font-family: sans-serif;
-    color: rgb(95, 95, 95);
-}
-.description .mrp span{
-    text-decoration: line-through;
-}
-
-.description .price{
-    font-size: 1rem;
-    font-family: sans-serif;
-    color: rgb(95, 95, 95);
-}
-.description .price span{
-    color: red;
-    font-size: 1.2rem;
-}
-
-.description .instock{
-    color: green;
-    font-size: 1.5rem;
-    margin: 10px 0px;
-}
-
-
-
-.pricedetails{
-    border: 1px solid grey;
-    width: 25%;
-}
-
-.texts{
-    padding-left: 20px;
-
-}
-
-.pricedetails .soldprice{
-    color: red;
-    margin-top: 30px;
+.description h1 {
+    font-size: 1.8rem;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
     margin-bottom: 10px;
 }
 
-.pricedetails .freedelivery{
-    color: rgb(4, 200, 200);
-    font-family: sans-serif;
-    margin-bottom: 30px;
+.description h1:hover {
+    color: #4c8bf5;
 }
 
-.pricedetails .instock{
-    color: rgb(0, 98, 255);
-    font-family: sans-serif;
-    margin-bottom: 20px;
+.description .brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #555;
+    margin: 20px 0;
 }
 
-.pricedetails p{
-    font-family: sans-serif;
+.description .mrp {
+    font-size: 1rem;
+    color: #777;
+    margin: 15px 0;
 }
 
-.pricedetails p span{
-    color: rgb(2, 173, 173);
+.description .mrp span {
+    text-decoration: line-through;
+    color: #999;
 }
 
-.pricedetails .button{
+.description .price {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.description .price span {
+    color: #e63946;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.description .instock {
+    color: #3cb371;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.pricedetails {
+    border: 1px solid #ddd;
+    width: 25%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.texts {
+    padding-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.pricedetails .soldprice {
+    color: #e63946;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.pricedetails .freedelivery {
+    color: #00796b;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.pricedetails .instock {
+    color: #1e88e5;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.pricedetails p {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.pricedetails p span {
+    color: #2a9d8f;
+    font-weight: bold;
+}
+
+.button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding-left: 0px;
+    margin-top: 20px;
 }
 
-.pricedetails .button1{
-    margin-top: 30px;
-    background-color: orange;
-}
-
-.pricedetails .button2{
-    margin-top: 10px;
-    background-color: rgb(255, 230, 0);
-}
-
-.pricedetails button{
-    display: block;
-    width: 97%;
+.button1, .button2 {
+    width: 95%;
     padding: 10px;
     border: none;
     border-radius: 5px;
-
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 1rem;
 }
 
-@media only screen and (min-width:768px){
-    .container{
-        width: 98vh;
-    }
+.button1 {
+    background-color: #f4a261;
+    color: #fff;
 }
-@media only screen and (max-width:425px){
-    .container{
-        width: 90%;
-        flex-direction: column; 
-        justify-content: flex-start; 
-        height: auto;  
+
+.button1:hover {
+    background-color: #e76f51;
+    transform: translateY(-3px);
+}
+
+.button2 {
+    background-color: #ffd166;
+    color: #333;
+    margin-top: 10px;
+}
+
+.button2:hover {
+    background-color: #ffa600;
+    transform: translateY(-3px);
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 85%;
+        flex-direction: column;
+        padding: 20px;
     }
-    .img img{
-        flex-direction: row;
-        height: 300px;
+
+    .img img {
+        height: 250px;
+        margin-bottom: 15px;
     }
-    .description{
+
+    .description, .pricedetails {
         width: 100%;
     }
-    .pricedetails{
+}
+
+@media only screen and (max-width: 425px) {
+    .container {
+        width: 95%;
+        height: auto;
+    }
+
+    .description {
+        width: 100%;
+    }
+
+    .pricedetails {
         width: 100%;
     }
 }
-
